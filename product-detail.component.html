@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <!--card code start here-->
+            <div *ngIf="data$ |async as product; else notFound">
+                <div class="card" style="width: 18rem;">
+                    <img [src]= "product.img" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">{{product.description}}</p>
+                    <p class="card-text">{{product.price}}</p>
+                    <p class="card-text">{{product.code}}</p>
+                    <p class="card-text">{{product.rating}}</p>
+                    <a class="btn btn-primary">Add to Cart</a>
+                    <a class="btn btn-warning">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <!--card code end here-->
+        </div>
+</div>
+</div>
+
+<ng-template #notFound>
+    <h1>Product with given id is not available</h1>
+</ng-template>

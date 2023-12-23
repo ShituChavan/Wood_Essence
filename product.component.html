@@ -1,0 +1,153 @@
+<!--filter button search bar code start-->
+<div class="container mt-4">
+  <div class="row">
+      <div class="col-6">
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+              <label class="btn btn-outline-warning" for="btnradio1" (click)="filterProduct('all')">All</label>
+            
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+              <label class="btn btn-outline-light" for="btnradio2" (click)="filterProduct('sofa')">Sofa</label>
+            
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+              <label class="btn btn-outline-light" for="btnradio3" (click)="filterProduct('table')">Table</label>
+
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+              <label class="btn btn-outline-light" for="btnradio4" (click)="filterProduct('bed')">Bed</label>
+
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+              <label class="btn btn-outline-light" for="btnradio5" (click)="filterProduct('chair')">Chairs</label>
+            </div>
+      </div>  
+      <div class="col-4">
+          <input class="form-control" type="text" placeholder="Product Name" [(ngModel)]="searchBy">
+          <!--<button class="btn btn-outline-success" type="submit">Search</button>-->
+      </div>
+
+      <div class="col-2">
+          <p>{{searchBy}}</p>
+        </div>
+  </div>
+</div>
+<!--filter button search bar code end-->
+
+<!--showing loading code start-->
+<div *ngIf="loading">
+  <h1>Products are loading</h1>
+</div>
+<!--showing loading code end-->
+
+<!--card code start-->
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-3 col-md-4 col-sm-12 mb-4" *ngFor="let product of filterProductArray|slice:startIndex:endIndex">
+        <div class="center">
+          <div class="property-card">
+            <a href="#">
+              <div class="property-image">
+                <img [src]="product.img" class="card-img-top" [alt]="product.name" [routerLink]="['/product',product.id]">
+                <div class="property-image-title">
+                   <!--Optional <h5>Card Title</h5> If you want it, turn on the CSS also.-->
+                </div>
+              </div>
+            </a>
+            <div class="property-description">
+              <h5 class="card-title">{{product.name | titlecase}}</h5>
+                    <p class="card-text" [title]="product.description">{{(product.description | slice:0|titlecase)}}</p>
+                    <p class="card-text">{{product.price | currency:"INR":true:"1.2-2"}}</p>
+                    <p class="card-text">{{product.code|dash_to_space}}</p>
+                    <p class="card-text"><app-star [rating]="product.rating" (sendRating)="displayRating($event)"></app-star></p>        
+            </div>
+              <div class="property-social-icons1 mt-5">
+                <a class="btn btn-danger" (click)="addToCart()">Add to Cart</a>
+              </div>
+
+              <div class="property-social-icons2 mt-5">
+                <a class="btn btn-warning" [routerLink]="['/buy']">Buy</a>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!--card code end-->
+
+<!--card code start here-->
+<!-- <div class="container mt-5">
+  <div class="row">
+      <div class="col-12 col-lg-3 col-md-4 col-sm-12 mb-4" *ngFor="let product of filterProductArray|slice:startIndex:endIndex">
+          <div class="card" style="width: 15rem;" [class.bgfeature]="product.bgcolor" style="border:solid" [style.width.rem]="cardwidth" [style.height.rem]="cardheight" [style.box-shadow]="shadow" [ngStyle]="cardTextStyles">
+              <img [src]="product.img" class="card-img-top" [alt]="product.name" [height]="400" [width]="300">
+              <div class="card-body">
+                  <h5 class="card-title" [routerLink]="['/product',product.id]">{{product.name | titlecase}}</h5>
+                  <p class="card-text" [title]="product.description">{{(product.description | slice:0|titlecase)}}</p>
+                  <p class="card-text">{{product.price | currency:"INR":true:"1.2-2"}}</p>
+                  <p class="card-text">{{product.code|dash_to_space}}</p>
+                  <p class="card-text"><app-star [rating]="product.rating" (sendRating)="displayRating($event)"></app-star></p>
+                  <a class="btn btn-danger" (click)="addToCart()">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div> -->
+<!--card end here-->
+
+<!--pagination code start-->
+<div class="container">
+  <div class="row">
+    <nav aria-label="...">
+      <ul class="pagination pagination-md justify-content-end">
+        <li class="page-item active">
+          <a class="page-link" [class.demo]="demo==true" (click)="changePage(1)">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" [class.demo]="demo==false" (click)="changePage(2)">2</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" [class.demo]="demo==true" (click)="changePage(3)">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" [class.demo]="demo==false" (click)="changePage(4)">4</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--pagination code end-->
+
+<!--new product-->
+<div class="container whats-new mb-4">
+  <div class="col-sm-6 col-md-6 sofa-float">
+    <img src="http://i345.photobucket.com/albums/p396/ruchi122/sofasingle_zps01rf3hfg.png" class="img-responsive" height="400">
+  </div>
+  <div class="col-sm-6 col-md-6 text-center whats-new-text">
+    <h1> What's New </h1>
+    <p class="paragraphs">Take a seat and relax like never before! This massage chair uses heat and vibration zones to target specific areas of the body for full relaxation with specialized massage controls for extra care. Soft faux leather and a plush interior ready your home for hours of relaxation. Change modes on the attached remote control to achieve the perfect massage settings; heat, vibration, presets, and zones control the various functions so you can create the perfect experience. </p>
+  </div>
+</div>
+<!--new product-->
+
+<!--facility section-->
+
+<div class="container-fluid mt-5">
+	<div class="row  text-center">
+		<div class="col-sm-4 col-md-4 facility-cod">
+			<h3> Cash On Delivery </h3>
+			<p> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
+		</div>
+		<div class="col-sm-4 col-md-4 facility-shipping">
+			<h3> Free Shipping</h3>
+			<p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
+		</div>
+		<div class="col-sm-4 col-md-4 facility-returns">
+			<h3>Easy Returns </h3>
+			<p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
+		</div>
+	</div>
+</div>
+
+<!--end of facility section-->
+
+
+
+
+  

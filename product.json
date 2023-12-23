@@ -1,0 +1,178 @@
+[
+  {
+    "id":1,
+    "name":"SOFA",
+    "price":20000,
+    "description":"Sink into the luxurious cushions of the Remy Sofa to experience ultimate comfort and relaxation.",
+    "img":"assets/img/sofa1.jpg",
+    "bgfeature":true,
+    "rating":4.4,
+    "category":"sofa",
+    "code":"sofa-001"
+  },
+  {
+    "id":2,
+    "name":"TABLE",
+    "price":20000,
+    "description":"A table for every snack and occasion. Table is a contemporary take on a mid-century classic.",
+    "img":"assets/img/table1.jpg",
+    "bgfeature":false,
+    "rating":4.4,
+    "category":"table",
+    "code":"table-001"
+  },
+  {
+    "id":3,
+    "name":"BED",
+    "price":20000,
+    "description":"Made of premium-quality engineered wood with a provincial teak finish. The ideal base for uninterrupted.",
+    "img":"assets/img/bed3.jpg",
+    "bgfeature":true,
+    "rating":4.4,
+    "category":"bed",
+    "code":"bed-001"
+  },
+  {
+    "id":4,
+    "name":"CHAIR",
+    "price":20000,
+    "description":"Those curves, though… the Sutton Accent Chair is equal parts elegant and ergonomic.",
+    "img":"assets/img/chair1.jpg",
+    "bgfeature":false,
+    "rating":4.4,
+    "category":"chair",
+    "code":"chair-001"
+  },
+  {
+    "id":5,
+    "name":"SOFA",
+    "price":20000,
+    "description":"Sink into the luxurious cushions of the Remy Sofa to experience ultimate comfort and relaxation.",
+    "img":"assets/img/sofa2.jpg",
+    "bgfeature":true,
+    "rating":4.4,
+    "category":"sofa",
+    "code":"sofa-002"
+  },
+  {
+    "id":6,
+    "name":"TABLE",
+    "price":20000,
+    "description":"A table for every snack and occasion. Table is a contemporary take on a mid-century classic.",
+    "img":"assets/img/table2.jpg",
+    "bgfeature":false,
+    "rating":4.4,
+    "category":"table",
+    "code":"table-002"
+  },
+  {
+    "id":7,
+    "name":"BED",
+    "price":20000,
+    "description":"Made of premium-quality engineered wood with a provincial teak finish. The ideal base for uninterrupted.",
+    "img":"assets/img/bed2.jpg",
+    "bgfeature":true,
+    "rating":4.4,
+    "category":"bed",
+    "code":"bed-002"
+  },
+  {
+    "id":8,
+    "name":"CHAIR",
+    "price":20000,
+    "description":"Industrial and mid-century modern come together to form the Asher Chair.",
+    "img":"assets/img/chair2.jpg",
+    "bgfeature":false,
+    "rating":4.4,
+    "category":"chair",
+    "code":"chair-002"
+  },
+  {
+    "id":9,
+    "name":"SOFA",
+    "price":20000,
+    "description":"Sink into the luxurious cushions of the Remy Sofa to experience ultimate comfort and relaxation.",
+    "img":"assets/img/sofa3.jpg",
+    "bgfeature":true,
+    "rating":4.4,
+    "category":"sofa",
+    "code":"sofa-003"
+  },
+  {
+    "id":10,
+    "name":"TABLE",
+    "price":20000,
+    "description":"A table for every snack and occasion. Table is a contemporary take on a mid-century classic.",
+    "img":"assets/img/table3.jpg",
+    "bgfeature":false,
+    "rating":4.4,
+    "category":"table",
+    "code":"table-003"
+  },
+  {
+    "id":11,
+    "name":"BED",
+    "price":20000,
+    "description":"Made of premium-quality engineered wood with a provincial teak finish. The ideal base for uninterrupted.",
+    "img":"assets/img/bed1.jpg",
+    "bgfeature":true,
+    "rating":4.4,
+    "category":"bed",
+    "code":"bed-003"
+  },
+  {
+    "id":12,
+    "name":"CHAIR",
+    "price":20000,
+    "description":"Industrial and mid-century modern come together to form the Asher Chair.",
+    "img":"assets/img/chair3.jpg",
+    "bgfeature":false,
+    "rating":4.4,
+    "category":"chair",
+    "code":"chair-003"
+  },
+  {
+    "id":13,
+    "name":"SOFA",
+    "price":20000,
+    "description":"Sink into the luxurious cushions of the Remy Sofa to experience ultimate comfort and relaxation.",
+    "img":"assets/img/sofa4.jpg",
+    "bgfeature":true,
+    "rating":4.4,
+    "category":"sofa",
+    "code":"sofa-004"
+  },
+  {
+    "id":14,
+    "name":"TABLE",
+    "price":20000,
+    "description":"A table for every snack and occasion. Table is a contemporary take on a mid-century classic.",
+    "img":"assets/img/table4.jpg",
+    "bgfeature":false,
+    "rating":4.4,
+    "category":"table",
+    "code":"table-004"
+  },
+  {
+    "id":15,
+    "name":"BED",
+    "price":20000,
+    "description":"Made of premium-quality engineered wood with a provincial teak finish. The ideal base for uninterrupted.",
+    "img":"assets/img/bed4.jpg",
+    "bgfeature":true,
+    "rating":4.4,
+    "category":"bed",
+    "code":"bed-004"
+  },
+  {
+    "id":16,
+    "name":"CHAIR",
+    "price":20000,
+    "description":"Those curves, though… the Sutton Accent Chair is equal parts elegant and ergonomic.",
+    "img":"assets/img/chair4.jpg",
+    "bgfeature":false,
+    "rating":4.4,
+    "category":"chair",
+    "code":"chair-004"
+  }
+]

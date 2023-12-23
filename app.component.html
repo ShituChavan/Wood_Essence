@@ -1,0 +1,144 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2ea3b0;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-shop"></i>
+          {{title}}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" [routerLink]="['/home']" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['/products']" routerLinkActive="active">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['aboutUs']" routerLinkActive="active">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['help']" routerLinkActive="active">Help</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Others
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Dining & Bar</a></li>
+                <li><a class="dropdown-item" href="#">Lighting</a></li>
+                <li><a class="dropdown-item" href="#">Lamp</a></li>
+                <li><a class="dropdown-item" href="#">Wall Accents</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Garden & Outdoor</a></li>
+                <li><a class="dropdown-item" href="#">Carpet</a></li>
+              </ul>
+            </li>
+          </ul>
+            <form class="d-flex">
+              <button type="button" class="btn btn-dark position-relative me-4">
+                <i class="bi bi-cart-plus-fill"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{cart_value | async}}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+
+              <button type="button" class="btn btn-light position-relative me-3">
+                <i class="bi bi-person-circle" [routerLink]="['profile']"></i>
+              </button>
+            </form>
+        </div>
+      </div>
+    </nav>
+
+<div class="container-fluid mt-3">
+ 
+</div>
+ <!--<app-product></app-product>-->
+<router-outlet></router-outlet>
+
+<!--footer start here-->
+<footer class="footer mt-5" style="background-image:url('https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80')" alt="footer_img">
+  <div class="container bottom_border mt-5">
+  <div class="row">
+  <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+  <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+  <!--headin5_amrc-->
+  <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+  <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+  <p><i class="fa fa-phone"></i>  +91-9999878398  </p>
+  <p><i class="fa fa fa-envelope"></i> info@example.com  </p>
+  
+  
+  </div>
+  
+  
+  <div class=" col-sm-4 col-md  col-6 col">
+  <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+  <!--headin5_amrc-->
+  <ul class="footer_ul_amrc">
+  <li><a href="https://www.canva.com/">Logo Design</a></li>
+  <li><a href="https://pathedits.com/">Clipping Path</a></li>
+  <li><a href="https://toonz.co/">3D Animation</a></li>
+  <li><a href="https://www.ebay.com/">Ebay & Amazon</a></li>
+  <li><a href="https://www.remove.bg/">Remove Background</a></li>
+  <li><a href="https://www.iloveimg.com/">Image Cropping</a></li>
+  </ul>
+  <!--footer_ul_amrc ends here-->
+  </div>
+  
+  
+  <div class=" col-sm-4 col-md  col-6 col">
+  <h5 class="headin5_amrc col_white_amrc pt2">Help</h5>
+  <!--headin5_amrc-->
+  <ul class="footer_ul_amrc">
+  <li><a href="https://support.trivago.com/">Lear how to MyTrip Work</a></li>
+  <li><a href="https://www.trivago.in/">Terms & Condition</a></li>
+  <li><a href="https://www.trivago.in/">Legal Information</a></li>
+  <li><a href="https://www.trivago.in/">Privacy Notice</a></li>
+  <li><a href="https://www.trivago.in/">Cyber Security</a></li>
+  <li><a href="https://support.trivago.com/">Coronavirus (COVID-19) travel advice</a></li>
+  </ul>
+  <!--footer_ul_amrc ends here-->
+  </div>
+  
+  
+  <div class=" col-sm-4 col-md  col-12 col">
+  <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+  <!--headin5_amrc ends here-->
+  
+  <ul class="footer_ul2_amrc">
+  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="https://www.lipsum.com/">https://www.lipsum.com/</a></p></li>
+  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="https://www.lipsum.com/">https://www.lipsum.com/</a></p></li>
+  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="https://www.lipsum.com/">https://www.lipsum.com/</a></p></li>
+  </ul>
+  <!--footer_ul2_amrc ends here-->
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="container">
+  <ul class="foote_bottom_ul_amrc">
+  <li><a href="home.html">Home</a></li>
+  <li><a href="aboutUs.html">About</a></li>
+  <li><a href="loginform.html">Login</a></li>
+  <li><a href="newreg.html">Sign up</a></li>
+  <li><a href="http://webenlance.com">Blog</a></li>
+  <li><a href="contactus.html">Contact Us</a></li>
+  </ul>
+  <!--foote_bottom_ul_amrc ends here-->
+  <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+  
+  <ul class="social_footer_ul">
+  <li><a href="http://facebook.com"><i class="bi bi-facebook"></i></a></li>
+  <li><a href="http://twitter.com"><i class="bi bi-twitter"></i></a></li>
+  <li><a href="http://linkedin.com"><i class="bi bi-linkedin"></i></a></li>
+  <li><a href="http://instagram.com"><i class="bi bi-instagram"></i></a></li>
+  </ul>
+  <!--social_footer_ul ends here-->
+  </div>
+  
+  </footer>
+<!--footer end here-->
